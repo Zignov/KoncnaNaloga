@@ -1,10 +1,12 @@
 package Redovalnica;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Vhod {
     public static void main(String[] args) {
         
         int IzbiraMenija;
+        ArrayList<String> SeznamPredmetov = predmet.getSeznamPredmetov();
 
         Scanner sc = new Scanner(System.in);
 
@@ -24,6 +26,8 @@ public class Vhod {
 
 
             case 4:
+
+                Izpis.zakljuci();
 
             
         }

@@ -1,22 +1,26 @@
 package Redovalnica;
 import java.io.*;
 import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
 
-import javax.swing.text.html.parser.Element;
 
 
-public class Izpis {
+public class Izpis{
+    
+     
 
-    Arraylist<String> SeznamPredmetov = Predmet.getSeznamPredmetov(); 
+    public void zakljuci(ArrayList<Predmet> predmeti){
 
-    public void zakljuci(){
+
+
         try {
             PrintWriter pw = new PrintWriter(
                 new OutputStreamWriter(new FileOutputStream("Redovalnica.txt"), StandardCharsets.UTF_8));
-
-            for (){
-
+            
+            for(Predmet predmet : predmeti){
+                pw.println(predmet);    //predmet.getOcena
             }
+            
             pw.close();
             
 
@@ -29,3 +33,4 @@ public class Izpis {
     }
 
 }
+

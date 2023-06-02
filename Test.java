@@ -46,8 +46,21 @@ public class Test{
         }
         else{
             System.out.println("Napaka");
-            System.exit(0);
+            System.exit(1);
         }
+
+
+
+        System.out.println("Izberite predmet");
+        String izbraniPredmet = sc.nextLine();
+
+        for (Predmet Predmet : SeznamPredmetov){
+            if(Predmet.getNaziv.equals(izbraniPredmet)){
+                System.out.println("Ocena dodana");
+                Predmet.DodajOceno(Ocena);
+            }
+        }
+
 
         
     }
