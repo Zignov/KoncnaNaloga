@@ -59,6 +59,9 @@ public class Test{
                 System.out.println("Ocena dodana");
                 Predmet.DodajOceno(Ocena);
             }
+            else{
+                System.out.println("Predmet ne obstaja");
+            }
         }
 
 

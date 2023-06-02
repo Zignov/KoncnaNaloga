@@ -15,11 +15,11 @@ public class Vhod {
         switch (IzbiraMenija){
             case 1:
 
-
+                Predmet.DodajPredmet();
 
             case 2:
 
-
+                Test.dodajOceno();
 
             case 3:
 
@@ -29,6 +29,10 @@ public class Vhod {
 
                 Izpis.zakljuci();
 
+
+            case 5:
+                System.out.println("Hvala za uporabo. Nasvidenje!");
+                System.exit(1);
             
         }
 

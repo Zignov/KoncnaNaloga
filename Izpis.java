@@ -3,6 +3,8 @@ import java.io.*;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 
+import javax.imageio.IIOException;
+
 
 
 public class Izpis{
@@ -18,7 +20,11 @@ public class Izpis{
                 new OutputStreamWriter(new FileOutputStream("Redovalnica.txt"), StandardCharsets.UTF_8));
             
             for(Predmet predmet : predmeti){
-                pw.println(predmet);    //predmet.getOcena
+                pw.println(String.join(",",new String[]{
+                    predmet.getNaziv()+" ",
+                    predmet.getOcena()+" - ",
+                    predmet.getPovprecje()+" "
+                }));    //predmet.getOcena
             }
             
             pw.close();
@@ -26,7 +32,11 @@ public class Izpis{
 
         
         } catch (FileNotFoundException e) {
-            
+            System.out.println("Zgodila se je napaka (File not found)");
+        }
+
+        catch(IIOException e){
+            System.out.println("Zgodila se je napaka (IO Exception)");
         }
 
         

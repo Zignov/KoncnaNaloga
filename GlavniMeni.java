@@ -10,7 +10,7 @@ public class GlavniMeni {
         System.out.println("2 - Dodajanje ocen");
         System.out.println("3 - Pregled ocen");
         System.out.println("4 - Izpis redovalnice");
-        System.out.println("5 - Ponastavitev");
+        System.out.println("5 - Zapri redovalnico");
     }
 
 

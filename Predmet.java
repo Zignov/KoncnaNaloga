@@ -20,6 +20,18 @@ public class Predmet {
     public String getNaziv(){
         return naziv;
     }
+
+    public ArrayList getOcene(){
+        return ocene;
+    }
+
+    public double getPovprecje(){
+        int skupekOcen = 0;
+        for(int i = 0; i<ocene.size(); i++){
+            skupekOcen += (int)ocene.get(i);
+        }
+        return(skupekOcen/ocene.size());
+    }
     
     ArrayList<Predmet> SeznamPredmetov = new ArrayList<>();
 
